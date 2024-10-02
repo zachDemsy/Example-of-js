@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown</title>
+</head>
+
+<body>
+    <form action="">
+        <select id="mySelect">
+            <option value="">Select a flower color</option>
+            <option value="blue">Blue flower</option>
+            <option value="yellow">Yellow flower</option>
+            <option value="red">Red Flower</option>
+            <option value="orange">Orange Flower</option>
+        </select>
+    </form>
+    <div id="imgs"></div>
+    <script>
+        const mySelect = document.getElementById('mySelect');
+        const imgs = document.getElementById('imgs');
+
+        mySelect.addEventListener('change', (e) => {
+            const selectedColor = e.target.value;
+            let imgHTML = '';
+            switch (selectedColor) {
+                case 'blue':
+                    imgHTML = '<img src="./blue.png" alt="Blue Flower">';
+                    break;
+                case 'yellow':
+                    imgHTML = '<img src="./yellow.png" alt="Yellow Flower">';
+                    break;
+                case 'red':
+                    imgHTML = '<img src="./red.png" alt="Red Flower">';
+                    break;
+                case 'orange':
+                    imgHTML = '<img src="./orange.png   " alt="Orange Flower">';
+                    break;
+                default:
+                    imgHTML = '';
+            }
+            imgs.innerHTML = imgHTML;
+        });
+    </script>
+</body>
+
+</html>

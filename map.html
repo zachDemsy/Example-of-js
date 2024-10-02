@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Map</title>
+    <style>
+        /* Add some basic styling to the map */
+        
+        svg {
+            width: 800px;
+            height: 600px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <!-- Background -->
+        <rect width="100vw" height="100vh" fill="lightblue" />
+    
+        <!-- COUNTRY PATHS -->
+    
+        <!-- USA -->
+        <path d="M 100 100 L 200 100 L 200 200 L 100 200 Z" id="USA" fill="#c0c0c0" stroke="#000000" stroke-width="1" />
+        <!-- Canada -->
+        <path d="M 300 100 L 400 100 L 400 200 L 300 200 Z" id="Canada" fill="#c0c0c0" stroke="#000000" stroke-width="1" />
+    
+        <!-- Africa -->
+        <path id="nigeria" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 500 300 Q 520 290 540 300 Q 530 320 500 320 Z" />
+        <path id="egypt" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 540 240 Q 550 230 560 240 Q 550 260 540 260 Z" />
+        <path id="south-africa" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 500 400 Q 520 390 530 400 Q 510 420 500 420 Z" />
+    
+        <!-- Europe -->
+        <path id="france" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 450 150 Q 460 140 470 150 Q 460 170 450 170 Z" />
+        <path id="germany" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 470 130 Q 480 120 490 130 Q 480 150 470 150 Z" />
+        <path id="italy" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 490 170 Q 500 160 510 170 Q 500 190 490 190 Z" />
+    
+        <!-- Asia -->
+        <path id="china" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 630 150 Q 670 130 690 160 Q 660 180 630 170 Z" />
+        <path id="india" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 580 250 Q 600 240 620 250 Q 610 270 580 270 Z" />
+        <path id="japan" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 700 180 Q 720 170 730 180 Q 720 200 700 200 Z" />
+    
+        <!-- North America -->
+        <path id="mexico" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 220 200 Q 240 190 250 200 Q 230 220 220 220 Z" />
+    
+        <!-- South America -->
+        <path id="brazil" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 340 320 Q 360 310 370 330 Q 350 350 340 340 Z" />
+        <path id="argentina" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 340 370 Q 360 360 370 380 Q 350 400 340 390 Z" />
+        <path id="colombia" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 320 290 Q 340 280 350 290 Q 330 310 320 300 Z" />
+    
+        <!-- Australia -->
+        <path id="australia" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 800 350 Q 850 380 870 350 Q 820 330 800 350 Z" />
+        <path id="new-zealand" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 880 400 Q 890 390 900 400 Q 890 420 880 410 Z" />
+    
+        <!-- Antarctica -->
+        <path id="antarctica" fill="#c0c0c0" stroke="#000000" stroke-width="1" d="M 450 450 Q 500 440 550 450 Q 520 490 480 490 Z" />
+    
+        <!-- LABELS -->
+    
+        <!-- Africa -->
+        <text x="520" y="310" font-family="Arial" font-size="12" fill="black">Nigeria</text>
+        <text x="550" y="250" font-family="Arial" font-size="12" fill="black">Egypt</text>
+        <text x="520" y="410" font-family="Arial" font-size="12" fill="black">South Africa</text>
+    
+        <!-- Europe -->
+        <text x="460" y="160" font-family="Arial" font-size="12" fill="black">France</text>
+        <text x="480" y="140" font-family="Arial" font-size="12" fill="black">Germany</text>
+        <text x="500" y="180" font-family="Arial" font-size="12" fill="black">Italy</text>
+    
+        <!-- Asia -->
+        <text x="650" y="160" font-family="Arial" font-size="12" fill="black">China</text>
+        <text x="590" y="260" font-family="Arial" font-size="12" fill="black">India</text>
+        <text x="710" y="190" font-family="Arial" font-size="12" fill="black">Japan</text>
+    
+        <!-- North America -->
+        <text x="210" y="160" font-family="Arial" font-size="12" fill="black">USA</text>
+        <text x="310" y="160" font-family="Arial" font-size="12" fill="black">Canada</text>
+        <text x="230" y="210" font-family="Arial" font-size="12" fill="black">Mexico</text>
+    
+        <!-- South America -->
+        <text x="350" y="330" font-family="Arial" font-size="12" fill="black">Brazil</text>
+        <text x="350" y="380" font-family="Arial" font-size="12" fill="black">Argentina</text>
+        <text x="330" y="300" font-family="Arial" font-size="12" fill="black">Colombia</text>
+    
+        <!-- Australia -->
+        <text x="820" y="370" font-family="Arial" font-size="12" fill="black">Australia</text>
+        <text x="890" y="410" font-family="Arial" font-size="12" fill="black">New Zealand</text>
+    
+        <!-- Antarctica -->
+        <text x="480" y="470" font-family="Arial" font-size="12" fill="black">Antarctica</text>
+    </svg>
+</body>
+
+</html>
